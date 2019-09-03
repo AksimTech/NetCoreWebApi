@@ -17,9 +17,13 @@ namespace Entities
         public DbSet<Owner> Owners { get; set; }
         public DbSet<Account> Accounts { get; set; }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseSqlite("Data Source=../Database/AutoParsing.db");
-        //}
+        // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        // {
+        //    optionsBuilder.UseSqlite("Data Source=../Database/database.db");
+        // }
+
+        // protected override void OnModelCreating(ModelBuilder builder){
+        //     base.OnModelCreating(builder);
+        // }
     }
 }

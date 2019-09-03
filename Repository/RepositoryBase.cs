@@ -16,7 +16,7 @@ namespace Repository
 
         public RepositoryBase(RepositoryContext repositoryContext)
         {
-            this.RepositoryContext = RepositoryContext;
+            this.RepositoryContext = repositoryContext;
         }
 
         public IQueryable<T> FindAll()

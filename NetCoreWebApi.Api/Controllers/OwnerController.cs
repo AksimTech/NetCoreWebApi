@@ -36,7 +36,7 @@ namespace NetCoreWebApi.Api.Controllers
         }
 
         [HttpGet("{id}", Name = "OwnerById")]
-        public async Task<IActionResult> GetOwnerById(Guid id)
+        public async Task<IActionResult> GetOwnerById(int id)
         {
             try
             {
@@ -57,7 +57,7 @@ namespace NetCoreWebApi.Api.Controllers
         }
 
         [HttpGet("{id}/account")]
-        public async Task<IActionResult> GetOwnerWithDetails(Guid id)
+        public async Task<IActionResult> GetOwnerWithDetails(int id)
         {
             try
             {
@@ -103,7 +103,7 @@ namespace NetCoreWebApi.Api.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateOwner(Guid id, [FromBody]Owner owner)
+        public async Task<IActionResult> UpdateOwner(int id, [FromBody]Owner owner)
         {
             try
             {
@@ -134,7 +134,7 @@ namespace NetCoreWebApi.Api.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteOwner(Guid id)
+        public async Task<IActionResult> DeleteOwner(int id)
         {
             try
             {

@@ -10,8 +10,8 @@ namespace Contracts
     public interface IOwnerRepository : IRepositoryBase<Owner>
     {
         Task<IEnumerable<Owner>> GetAllOwnersAsync();
-        Task<Owner> GetOwnerByIdAsync(Guid ownerId);
-        Task<OwnerExtended> GetOwnerWithDetailsAsync(Guid ownerId);
+        Task<Owner> GetOwnerByIdAsync(int ownerId);
+        Task<OwnerExtended> GetOwnerWithDetailsAsync(int ownerId);
         Task CreateOwnerAsync(Owner owner);
         Task UpdateOwnerAsync(Owner dbOnwer, Owner owner);
         Task DeleteOwnerAsync(Owner owner);

@@ -27,14 +27,14 @@ namespace Repository
                 .ToListAsync();
         }
 
-        public async Task<Owner> GetOwnerByIdAsync(Guid ownerId)
+        public async Task<Owner> GetOwnerByIdAsync(int ownerId)
         {
             return await FindByCondition(o => o.Id.Equals(ownerId))
                 .DefaultIfEmpty(new Owner())
                 .SingleAsync();
         }
 
-        public async Task<OwnerExtended> GetOwnerWithDetailsAsync(Guid ownerId)
+        public async Task<OwnerExtended> GetOwnerWithDetailsAsync(int ownerId)
         {
             return await FindByCondition(o => o.Id.Equals(ownerId))
                 .Select(owner => new OwnerExtended(owner)
@@ -48,7 +48,7 @@ namespace Repository
 
         public async Task CreateOwnerAsync(Owner owner)
         {
-            owner.Id = Guid.NewGuid();
+            //Id = Guid.NewGuid();
             Create(owner);
             await SaveAsync();
         }

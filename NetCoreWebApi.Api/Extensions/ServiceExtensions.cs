@@ -38,6 +38,7 @@ namespace NetCoreWebApi.Api.Extensions
         {
             var connectionString = config["sqliteconnection:connectionString"];
             services.AddDbContext<RepositoryContext>(o => o.UseSqlite(connectionString));
+            
         }
 
         public static void ConfigureRepositoryWrapper(this IServiceCollection services)

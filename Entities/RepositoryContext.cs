@@ -8,19 +8,14 @@ namespace Entities
 {
     public class RepositoryContext: DbContext
     {
-        //public RepositoryContext(DbContextOptions options)
-        //    : base(options)
-        //{
+        public RepositoryContext(DbContextOptions options)
+            : base(options)
+        {
 
-        //}
+        }
 
         public DbSet<Owner> Owners { get; set; }
         public DbSet<Account> Accounts { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite("Data Source=../Database/Database.db");
-        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
